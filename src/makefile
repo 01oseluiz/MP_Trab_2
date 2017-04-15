@@ -9,10 +9,10 @@ LDIR=../lib
 GTESTLIBS = -lgtest
 LIBS=$(GTESTLIBS) -lm
 
-_DEPS=grafo.h
+_DEPS=conversor.h
 DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))
 
-_OBJ=testa_grafo.o grafo.o 
+_OBJ=main.o conversor.o 
 OBJ=$(patsubst %,$(ODIR)/%,$(_OBJ))
 
 $(ODIR)/%.o: %.$(EXT) $(DEPS)
