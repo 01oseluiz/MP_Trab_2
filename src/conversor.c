@@ -1,3 +1,5 @@
+#include "conversor.h"
+
 int computeNumber (int *symbols){
     int size, number = 0;
     int i;

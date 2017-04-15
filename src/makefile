@@ -18,7 +18,7 @@ OBJ=$(patsubst %,$(ODIR)/%,$(_OBJ))
 $(ODIR)/%.o: %.$(EXT) $(DEPS)
 	$(CC) -c -o $@ $< $(CFLAGS)
 
-grafo: $(OBJ)
+conversor: $(OBJ)
 	$(CC) -o $@ $^ $(CFLAGS) $(LIBS)
 
 .PHONY: clean
