@@ -1,56 +1,117 @@
 #include "conversor.h"
 
-int computeNumber (int *symbols){
-    int size, number = 0;
-    int i;
-    for(i=symbols[0]; i>0; i--){
-        if(i==1 || symbols[i] <= symbols[i-1]){
-            number +=symbols[i];
+int computaNumero (int *simbolos){
+    int numero = 0; //valor de saida
+    int i;//var controle
+    
+    /*Percore ao inverso o vetor de inteiros (simbolos), computando os valores*/
+    for(i=simbolos[0]; i>0; i--){
+        if(i==1 || simbolos[i] <= simbolos[i-1]){
+            numero +=simbolos[i];
         }
-        else if(symbols[i]>symbols[i-1]){
-            number +=(symbols[i] - symbols[i-1]);
+        else if(simbolos[i]>simbolos[i-1]){
+            numero +=(simbolos[i] - simbolos[i-1]);
             i--;
         }
     }
-
-    return number;
+    
+    free(simbolos); //ponteiro criado na funcao posterior
+    return numero;
 }
 
-int* convertArabic (char *roman){
-    int i;
-    int *numbers;
+int* transformaArabico (char *roman){
+    int i;//var controle
+    int *numeros;
 
-    numbers = (int *) malloc((strlen(roman)+1)*sizeof(int));
-    numbers[0] = strlen(roman);
+    numeros = (int *) malloc((strlen(roman)+1)*sizeof(int));
+    numeros[0] = strlen(roman);
 
     for(i=1; i<=strlen(roman); i++){
         
-        switch(toupper(roman[i-1])){
+        switch(roman[i-1]){
             case 'I':
-                numbers[i] = 1;
+                numeros[i] = 1;
                 break;
             case 'V':
-                numbers[i] = 5;
+                numeros[i] = 5;
                 break;
             case 'X':
-                numbers[i] = 10;
+                numeros[i] = 10;
                 break;
             case 'L':
-                numbers[i] = 50;
+                numeros[i] = 50;
                 break;
             case 'C':
-                numbers[i] = 100;
+                numeros[i] = 100;
                 break;
             case 'D':
-                numbers[i] = 500;
+                numeros[i] = 500;
                 break;
             case 'M':
-                numbers[i] = 1000;
+                numeros[i] = 1000;
                 break;
             default:
                 return NULL;
         }
     }
 
-    return numbers;
+    return numeros;
+}
+
+int* subdivideNumero(int numero){
+    int *sub_numeros;
+    
+    sub_numeros = (int *) malloc(4*sizeof(int));
+    
+    sub_numeros[0] = (numero / 1000);
+    sub_numeros[1] = (numero%1000)/100;
+    sub_numeros[2] = ((numero%1000)%100)/10;
+    sub_numeros[3] = (((numero%1000)%100)%10);
+    
+    return sub_numeros;
+}
+
+char* transformaRomano(int* sub_numeros){
+    int i;
+    
+    char centenas[10][5] = {"","C","CC","CCC","CD","D","DC","DCC","DCCC","CM"};
+    char dezenas[10][5] = {"","X","XX","XXX","XL","L","LX","LXX","LXXX","XC"};
+    char unidades[10][5] = {"","I","II","III","IV","V","VI","VII","VIII","IX"};
+    
+    char *numeroRomano;
+    numeroRomano = (char*) malloc(30*sizeof(char));
+    
+    for(i=0; i<sub_numeros[0]; i++){                    //Adiciona simbologia de milhares caso haja
+        numeroRomano[i] = 'M';
+    }
+    numeroRomano[i] = '\0';
+    
+    strcat(numeroRomano, centenas[sub_numeros[1]]);     //Concatena centenas
+    strcat(numeroRomano, dezenas[sub_numeros[2]]);      //dezenas
+    strcat(numeroRomano, unidades[sub_numeros[3]]);     //e unidades
+    
+    free(sub_numeros); //Ponteiro criado na funcao anterior
+    
+    numeroRomano = (char*) realloc(numeroRomano, strlen(numeroRomano)*sizeof(char));
+    return numeroRomano;
+}
+
+int converteArabico(char *simbolos){
+    int i;
+    int Numero;
+    char *check_simbolos;
+    
+    Numero = computaNumero(transformaArabico(simbolos));            //Converte numero romano em arabico
+    
+    check_simbolos = transformaRomano(subdivideNumero(Numero));     //Converte numero arabico obtido acima em romano
+    
+    if(strcmp(simbolos,check_simbolos) == 0 && Numero <=3000){      //Compara para fins de prova real
+        free(check_simbolos);
+        return Numero;
+    }
+    else{
+        free(check_simbolos);
+        return -1;
+    }
+
 }
