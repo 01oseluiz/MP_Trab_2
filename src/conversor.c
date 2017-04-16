@@ -50,8 +50,6 @@ int* transformaArabico (char *roman){
             case 'M':
                 numeros[i] = 1000;
                 break;
-            default:
-                return NULL;
         }
     }
 
@@ -96,17 +94,25 @@ char* transformaRomano(int* sub_numeros){
     return numeroRomano;
 }
 
-int converteArabico(char *simbolos){
+int converteArabico(char *simbolos_entrada){
     int i;
     int Numero;
-    char *check_simbolos;
+    char *check_simbolos, simbolos[30];
+    
+    strcpy(simbolos, simbolos_entrada); // Copia todos os dados para uma varial estatica
+    
+    for(i=0; i<strlen(simbolos); i++){              // Converte para maiusculo
+        if(simbolos[i]>=65 && simbolos[i]<=122)     // Verifica se são letras
+            simbolos[i] = toupper(simbolos[i]);
+        else
+            return -1;
+    }
     
     Numero = computaNumero(transformaArabico(simbolos));            //Converte numero romano em arabico
+    check_simbolos = transformaRomano(subdivideNumero(Numero));     //Converte numero arabico obtido acima para romano
     
-    check_simbolos = transformaRomano(subdivideNumero(Numero));     //Converte numero arabico obtido acima em romano
-    
-    if(strcmp(simbolos,check_simbolos) == 0 && Numero <=3000){      //Compara para fins de prova real
-        free(check_simbolos);
+    if(strcmp(simbolos,check_simbolos) == 0 && Numero <=3000){      //Compara tamanho maximo do número permitido (3000)
+        free(check_simbolos);                                       //e semelhanca entre valor esperado e obtido para fins de prova real
         return Numero;
     }
     else{

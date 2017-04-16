@@ -99,8 +99,33 @@ TEST(converteArabico, Entrada_correta){
     EXPECT_EQ(3000,converteArabico((char*)"MMM"));
 }
 
-int main(int argc, char **argv){
+TEST(converteArabico, Entradas_incorretas){
+    //ENTRADAS COM REPETICAO EXCESSIVA
+    EXPECT_EQ(-1,converteArabico((char*)"IIII"));
+    EXPECT_EQ(-1,converteArabico((char*)"VV"));
+    EXPECT_EQ(-1,converteArabico((char*)"XXXX"));
+    EXPECT_EQ(-1,converteArabico((char*)"LL"));
+    EXPECT_EQ(-1,converteArabico((char*)"CCCC"));
+    EXPECT_EQ(-1,converteArabico((char*)"DD"));
     
+    //ENTRADAS MINUSCULAS
+    EXPECT_EQ(2038,converteArabico((char*)"MMxXXVIIi"));
+    EXPECT_EQ(2449,converteArabico((char*)"MMCdXLIx"));
+    EXPECT_EQ(2999,converteArabico((char*)"mmCMXCIX"));
+    
+    //ENTRADAS ERRADAS
+    EXPECT_EQ(-1,converteArabico((char*)"ICCC"));
+    EXPECT_EQ(-1,converteArabico((char*)"VM"));
+    
+    //ENTRADAS INEXISTENTES
+    EXPECT_EQ(-1,converteArabico((char*)"WI"));
+    EXPECT_EQ(-1,converteArabico((char*)"-12"));
+    
+    //O PROGRAMA NAO VERIFICA AS SEGUINTES ENTRADAS INEXISTENTES:
+    // '[' , ']' , '\' , '^' , '_' , ''' , '' 
+}
+
+int main(int argc, char **argv){
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();
 }
