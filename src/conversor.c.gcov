@@ -1,6 +1,6 @@
         -:    0:Source:conversor.c
-        -:    0:Graph:conversor.gcno
-        -:    0:Data:conversor.gcda
+        -:    0:Graph:obj/conversor.gcno
+        -:    0:Data:obj/conversor.gcda
         -:    0:Runs:1
         -:    0:Programs:1
         -:    1:#include "conversor.h"
@@ -95,34 +95,33 @@
         -:   90:    
        36:   91:    free(sub_numeros); //Ponteiro criado na funcao anterior
         -:   92:    
-       36:   93:    numeroRomano = (char*) realloc(numeroRomano, strlen(numeroRomano)*sizeof(char));
-       36:   94:    return numeroRomano;
-        -:   95:}
-        -:   96:
-       36:   97:int converteArabico(char *simbolos_entrada){
-        -:   98:    int i;
-        -:   99:    int Numero;
-        -:  100:    char *check_simbolos, simbolos[30];
-        -:  101:    
-       36:  102:    strcpy(simbolos, simbolos_entrada); // Copia todos os dados para uma varial estatica
-        -:  103:    
-      173:  104:    for(i=0; i<strlen(simbolos); i++){              // Converte para maiusculo
-      138:  105:        if(simbolos[i]>=65 && simbolos[i]<=122)     // Verifica se são letras
-      137:  106:            simbolos[i] = toupper(simbolos[i]);
-        -:  107:        else
-        1:  108:            return -1;
-        -:  109:    }
-        -:  110:    
-       35:  111:    Numero = computaNumero(transformaArabico(simbolos));            //Converte numero romano em arabico
-       35:  112:    check_simbolos = transformaRomano(subdivideNumero(Numero));     //Converte numero arabico obtido acima para romano
-        -:  113:    
-       35:  114:    if(strcmp(simbolos,check_simbolos) == 0 && Numero <=3000){      //Compara tamanho maximo do número permitido (3000)
-       25:  115:        free(check_simbolos);                                       //e semelhanca entre valor esperado e obtido para fins de prova real
-       25:  116:        return Numero;
-        -:  117:    }
-        -:  118:    else{
-       10:  119:        free(check_simbolos);
-       10:  120:        return -1;
-        -:  121:    }
-        -:  122:
-        -:  123:}
+       36:   93:    return numeroRomano;
+        -:   94:}
+        -:   95:
+       36:   96:int converteArabico(char *simbolos_entrada){
+        -:   97:    int i;
+        -:   98:    int Numero;
+        -:   99:    char *check_simbolos, simbolos[30];
+        -:  100:    
+       36:  101:    strcpy(simbolos, simbolos_entrada); // Copia todos os dados para uma varial estatica
+        -:  102:    
+      173:  103:    for(i=0; i<strlen(simbolos); i++){              // Converte para maiusculo
+      138:  104:        if(simbolos[i]>=65 && simbolos[i]<=122)     // Verifica se são letras
+      137:  105:            simbolos[i] = toupper(simbolos[i]);
+        -:  106:        else
+        1:  107:            return -1;
+        -:  108:    }
+        -:  109:    
+       35:  110:    Numero = computaNumero(transformaArabico(simbolos));            //Converte numero romano em arabico
+       35:  111:    check_simbolos = transformaRomano(subdivideNumero(Numero));     //Converte numero arabico obtido acima para romano
+        -:  112:    
+       35:  113:    if(strcmp(simbolos,check_simbolos) == 0 && Numero <=3000){      //Compara tamanho maximo do número permitido (3000)
+       25:  114:        free(check_simbolos);                                       //e semelhanca entre valor esperado e obtido para fins de prova real
+       25:  115:        return Numero;
+        -:  116:    }
+        -:  117:    else{
+       10:  118:        free(check_simbolos);
+       10:  119:        return -1;
+        -:  120:    }
+        -:  121:
+        -:  122:}

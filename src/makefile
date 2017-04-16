@@ -1,13 +1,13 @@
 IDIR=../include
 CC=g++
-CFLAGS =-I$(IDIR)
+CFLAGS =-I$(IDIR) -ftest-coverage -fprofile-arcs
 EXT=c
 
 ODIR=obj
 LDIR=../lib
 
 GTESTLIBS = -lgtest
-LIBS=$(GTESTLIBS) -ftest-coverage -fprofile-arcs
+LIBS=$(GTESTLIBS) -lm
 
 _DEPS=conversor.h
 DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))

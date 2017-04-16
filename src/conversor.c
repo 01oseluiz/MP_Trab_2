@@ -90,7 +90,6 @@ char* transformaRomano(int* sub_numeros){
     
     free(sub_numeros); //Ponteiro criado na funcao anterior
     
-    numeroRomano = (char*) realloc(numeroRomano, strlen(numeroRomano)*sizeof(char));
     return numeroRomano;
 }
 
