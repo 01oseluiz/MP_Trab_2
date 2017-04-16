@@ -7,7 +7,7 @@ ODIR=obj
 LDIR=../lib
 
 GTESTLIBS = -lgtest
-LIBS=$(GTESTLIBS) -lm
+LIBS=$(GTESTLIBS) -ftest-coverage -fprofile-arcs
 
 _DEPS=conversor.h
 DEPS=$(patsubst %,$(IDIR)/%,$(_DEPS))

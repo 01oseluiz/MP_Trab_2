@@ -121,6 +121,9 @@ TEST(converteArabico, Entradas_incorretas){
     EXPECT_EQ(-1,converteArabico((char*)"WI"));
     EXPECT_EQ(-1,converteArabico((char*)"-12"));
     
+    //ENTRADA ACIMA DO PERMITIDO
+    EXPECT_EQ(-1,converteArabico((char*)"MMMi"));
+    
     //O PROGRAMA NAO VERIFICA AS SEGUINTES ENTRADAS INEXISTENTES:
     // '[' , ']' , '\' , '^' , '_' , ''' , '' 
 }
