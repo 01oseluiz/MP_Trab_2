@@ -11,7 +11,7 @@ TEST(Conversao_geral, Entrada_correta){
     EXPECT_EQ(7, computeNumber(convertArabic((char*)"vii")));
     EXPECT_EQ(8, computeNumber(convertArabic((char*)"viii")));
     EXPECT_EQ(9, computeNumber(convertArabic((char*)"ix")));
-    EXPECT_EQ(10, computeNumber(convertArabic((char*)"x")));
+    EXPECT_EQ(3000, computeNumber(convertArabic((char*)"mmm")));
 }
 
 int main(int argc, char **argv){

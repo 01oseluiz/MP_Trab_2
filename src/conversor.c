@@ -24,30 +24,31 @@ int* convertArabic (char *roman){
     numbers[0] = strlen(roman);
 
     for(i=1; i<=strlen(roman); i++){
-        switch(roman[i-1]){
-            case 'i':
+        
+        switch(toupper(roman[i-1])){
+            case 'I':
                 numbers[i] = 1;
                 break;
-            case 'v':
+            case 'V':
                 numbers[i] = 5;
                 break;
-            case 'x':
+            case 'X':
                 numbers[i] = 10;
                 break;
-            case 'l':
+            case 'L':
                 numbers[i] = 50;
                 break;
-            case 'c':
+            case 'C':
                 numbers[i] = 100;
                 break;
-            case 'd':
+            case 'D':
                 numbers[i] = 500;
                 break;
-            case 'm':
+            case 'M':
                 numbers[i] = 1000;
                 break;
             default:
-                exit(3);
+                return NULL;
         }
     }
 
