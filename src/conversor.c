@@ -1,5 +1,11 @@
 #include "conversor.h"
 
+/**
+	Objetivo: Computar um array de inteiros (valores de uma numero Romano), retornando um numero arabico.\n
+	Parametros: Array de inteiros (tamanho variavel).\n
+	Retorno: Numero inteiro.\n
+	OBS: Funciona somente para entradas corretas.\n
+*/
 int computaNumero (int *simbolos){
     int numero = 0; //valor de saida
     int i;//var controle
@@ -19,6 +25,12 @@ int computaNumero (int *simbolos){
     return numero;
 }
 
+/**
+	Objetivo: Transformar um numero romano em um array de inteiro corresponte as letras do numero romano.\n
+	Parametros: Uma string.\n
+	Retorno: Array de inteiros.\n
+	OBS: Funciona somente para entradas corretas.\n
+*/
 int* transformaArabico (char *roman){
     int i;//var controle
     int *numeros;
@@ -56,6 +68,12 @@ int* transformaArabico (char *roman){
     return numeros;
 }
 
+/**
+	Objetivo: Subdivider um numero inteiro de 4 algarismos em um array com seus respectivos algarismos.\n
+	Parametros: Um inteiro.\n
+	Retorno: Array de inteiros.\n
+	OBS: Funciona somente para entradas corretas.\n
+*/
 int* subdivideNumero(int numero){
     int *sub_numeros;
     
@@ -69,6 +87,12 @@ int* subdivideNumero(int numero){
     return sub_numeros;
 }
 
+/**
+	Objetivo: Transformar um array de inteiros em um numero romano.\n
+	Parametros: Array de inteiros.\n
+	Retorno: String.\n
+	OBS: Funciona somente para entradas corretas.\n
+*/
 char* transformaRomano(int* sub_numeros){
     int i;
     
@@ -93,6 +117,13 @@ char* transformaRomano(int* sub_numeros){
     return numeroRomano;
 }
 
+/**
+	Objetivo: Converter um numero romano em um numero arabico.\n
+	Parametros: String.\n
+	Retorno: Numero inteiro.\n
+	OBS: Realiza tratamento de excessões, para entradas diferentes das corretas.\n
+		 Para tal realiza a conversão contraria fazendo uma prova real.\n
+*/
 int converteArabico(char *simbolos_entrada){
     int i;
     int Numero;

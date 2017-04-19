@@ -1,7 +1,12 @@
 #include "conversor.h"
 #include <gtest/gtest.h>
 
-
+/** 
+	Teste para função transformaArabico().\n
+	Objetivo: Transformar um conjunto de simbolos romanos em um array de seus respectivos valores em arabico.\n
+	Teste: Testado somente um valor de entrada correto "MDCLXXI". Uma vez que ele sempre recebera os valores no formato correto.\n
+	A função passou no teste realizado.\n
+*/
 TEST(transformaArabico, Entrada_correta){
     int *numeros;
     
@@ -18,6 +23,12 @@ TEST(transformaArabico, Entrada_correta){
     free(numeros);
 }
 
+/** 
+	Teste para função computaNumero().\n
+	Objetivo: Computar o array de numero arabicos gerado pela função transformaArabico, retornando o valor correspondente em arabico.\n
+	Teste: Testado somente um valor de entrada correto (Entrada "MDCLXXI" Saida esperada 1671). Uma vez que ele sempre recebera os valores no formato correto.\n
+	A função passou no teste realizado.\n
+*/
 TEST(computaNumero, Entrada_correta){
     int *numeros;
     int numero_arabico;
@@ -35,6 +46,12 @@ TEST(computaNumero, Entrada_correta){
     EXPECT_EQ(1671,computaNumero(numeros));
 }
 
+/** 
+	Teste para função subdivideNumero().\n
+	Objetivo: Transformar um numero arabico em um array de 4 algarismos, separando o número em seus 4 algarismos (EX: 1234 -> [1,2,3,4]).\n
+	Teste: Testado somente um valor de entrada correto (Entrada 299, Saida [0,2,9,9]). Uma vez que ele sempre recebera os valores no formato correto.\n
+	A função passou no teste realizado.\n
+*/
 TEST(subdivideNumero, Entrada_correta){
     int *numeros;
     
@@ -48,6 +65,12 @@ TEST(subdivideNumero, Entrada_correta){
     free(numeros);
 }
 
+/** 
+	Teste para função transformaRomano().\n
+	Objetivo: transformar um conjunto de algarismo arabicos em um array de seus respectivos valores em romanos.\n
+	Teste: Testado somente um valor de entrada correto (Entrada [0,2,9,9], Saida "CCXCIX").\n
+	A função passou no teste realizado.\n
+*/
 TEST(transformaRomano, Entrada_correta){
     int *numeros;
     char* symbolos;
@@ -65,15 +88,14 @@ TEST(transformaRomano, Entrada_correta){
     free(symbolos);
 }
 
-/*
-    TESTE DA FUNÇÃO converteArabico()
-    
-    Esta funcao deve tratar todos os casos de entrada do usuario
-    Logo todas as anteriores somente iram receber valores corretos de entrada
-    
-    Esperado -1 para erros de entrada e o número arabico correto no caso de entradas corretas
- */
 
+/**
+	Teste para função converteArabico().\n
+	Objetivo: transformar um numero romano em um numero arabico, utiliza das demais funções para tal, sendo que seu principal objetivo
+	é confirmar a veracidade do valor antes de retornar para o usuario.\n
+	Teste: Testado somente um valor de entrada correto.\n
+	A função passou no teste realizado.\n
+*/
 TEST(converteArabico, Entrada_correta){
     EXPECT_EQ(1,converteArabico((char*)"I"));
     EXPECT_EQ(9,converteArabico((char*)"IX"));
@@ -99,6 +121,21 @@ TEST(converteArabico, Entrada_correta){
     EXPECT_EQ(3000,converteArabico((char*)"MMM"));
 }
 
+/**
+    Teste da função converteArabico().\n
+    \n
+    Esta funcao deve tratar todos os casos de entrada do usuario.\n 
+    Logo todas as anteriores somente iram receber valores corretos de entrada.\n 
+    Foi testado os seguintes casos de entrada:\n
+		- Symbolos em letras maiusculas e minuscolas;\n
+		- Repetições excessivas;\n
+		- Romanos incorretas;\n
+		- Romanos inexistentes;\n
+		- Acima do valor permitido (3000);\n
+		\n
+    Retornado -1 para erros de entrada ou valores inexistentes, retornado o número arabico correto no caso de entradas corretas.\n 
+	OBS: o programa não verifica as seguintes entradas: '[' , ']' , '\' , '^' , '_' , ''' , ''.\n
+ */
 TEST(converteArabico, Entradas_incorretas){
     //ENTRADAS COM REPETICAO EXCESSIVA
     EXPECT_EQ(-1,converteArabico((char*)"IIII"));
@@ -132,3 +169,8 @@ int main(int argc, char **argv){
     testing::InitGoogleTest(&argc,argv);
     return RUN_ALL_TESTS();
 }
+
+/**
+	Todos os testes realizados foram concluidos com exito.\n
+	Apos avaliação do conjunto de testes pelo gcov, podemos concluir que os testes realizados abrangem 100% dos algoritimos desenvolvidos no modulo conversor.c.\n
+*/
