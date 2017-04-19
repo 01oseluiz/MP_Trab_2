@@ -1,0 +1,73 @@
+\hypertarget{conversor_8h}{}\section{/home/hugo/Área de Trabalho/\+Frodao/include/conversor.h File Reference}
+\label{conversor_8h}\index{/home/hugo/Área de Trabalho/\+Frodao/include/conversor.\+h@{/home/hugo/Área de Trabalho/\+Frodao/include/conversor.\+h}}
+{\ttfamily \#include $<$stdio.\+h$>$}\newline
+{\ttfamily \#include $<$stdlib.\+h$>$}\newline
+{\ttfamily \#include $<$string.\+h$>$}\newline
+{\ttfamily \#include $<$ctype.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+int \hyperlink{conversor_8h_a375508b9224e67df4550b9ff34d84c51}{computa\+Numero} (int $\ast$)
+\item 
+int $\ast$ \hyperlink{conversor_8h_a728f04ff315af843f0d88f28bdbee5eb}{transforma\+Arabico} (char $\ast$)
+\item 
+int $\ast$ \hyperlink{conversor_8h_a416f9e821750356055dfab77c7bc54e5}{subdivide\+Numero} (int)
+\item 
+char $\ast$ \hyperlink{conversor_8h_a8c8fe9c20601517b4d1d88efbf849f1c}{transforma\+Romano} (int $\ast$)
+\item 
+int \hyperlink{conversor_8h_a92a8d8307dae077045b59827f10ee804}{converte\+Arabico} (char $\ast$)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{conversor_8h_a375508b9224e67df4550b9ff34d84c51}\label{conversor_8h_a375508b9224e67df4550b9ff34d84c51}} 
+\index{conversor.\+h@{conversor.\+h}!computa\+Numero@{computa\+Numero}}
+\index{computa\+Numero@{computa\+Numero}!conversor.\+h@{conversor.\+h}}
+\subsubsection{\texorpdfstring{computa\+Numero()}{computaNumero()}}
+{\footnotesize\ttfamily int computa\+Numero (\begin{DoxyParamCaption}\item[{int $\ast$}]{simbolos }\end{DoxyParamCaption})}
+
+Objetivo\+: Computar um array de inteiros (valores de uma numero Romano), retornando um numero arabico.~\newline
+Parametros\+: Array de inteiros (tamanho variavel).~\newline
+Retorno\+: Numero inteiro.~\newline
+O\+BS\+: Funciona somente para entradas corretas.~\newline
+\mbox{\Hypertarget{conversor_8h_a92a8d8307dae077045b59827f10ee804}\label{conversor_8h_a92a8d8307dae077045b59827f10ee804}} 
+\index{conversor.\+h@{conversor.\+h}!converte\+Arabico@{converte\+Arabico}}
+\index{converte\+Arabico@{converte\+Arabico}!conversor.\+h@{conversor.\+h}}
+\subsubsection{\texorpdfstring{converte\+Arabico()}{converteArabico()}}
+{\footnotesize\ttfamily int converte\+Arabico (\begin{DoxyParamCaption}\item[{char $\ast$}]{simbolos\+\_\+entrada }\end{DoxyParamCaption})}
+
+Objetivo\+: Converter um numero romano em um numero arabico.~\newline
+Parametros\+: String.~\newline
+Retorno\+: Numero inteiro.~\newline
+O\+BS\+: Realiza tratamento de excessões, para entradas diferentes das corretas.~\newline
+ Para tal realiza a conversão contraria fazendo uma prova real.~\newline
+\mbox{\Hypertarget{conversor_8h_a416f9e821750356055dfab77c7bc54e5}\label{conversor_8h_a416f9e821750356055dfab77c7bc54e5}} 
+\index{conversor.\+h@{conversor.\+h}!subdivide\+Numero@{subdivide\+Numero}}
+\index{subdivide\+Numero@{subdivide\+Numero}!conversor.\+h@{conversor.\+h}}
+\subsubsection{\texorpdfstring{subdivide\+Numero()}{subdivideNumero()}}
+{\footnotesize\ttfamily int$\ast$ subdivide\+Numero (\begin{DoxyParamCaption}\item[{int}]{numero }\end{DoxyParamCaption})}
+
+Objetivo\+: Subdivider um numero inteiro de 4 algarismos em um array com seus respectivos algarismos.~\newline
+Parametros\+: Um inteiro.~\newline
+Retorno\+: Array de inteiros.~\newline
+O\+BS\+: Funciona somente para entradas corretas.~\newline
+\mbox{\Hypertarget{conversor_8h_a728f04ff315af843f0d88f28bdbee5eb}\label{conversor_8h_a728f04ff315af843f0d88f28bdbee5eb}} 
+\index{conversor.\+h@{conversor.\+h}!transforma\+Arabico@{transforma\+Arabico}}
+\index{transforma\+Arabico@{transforma\+Arabico}!conversor.\+h@{conversor.\+h}}
+\subsubsection{\texorpdfstring{transforma\+Arabico()}{transformaArabico()}}
+{\footnotesize\ttfamily int$\ast$ transforma\+Arabico (\begin{DoxyParamCaption}\item[{char $\ast$}]{roman }\end{DoxyParamCaption})}
+
+Objetivo\+: Transformar um numero romano em um array de inteiro corresponte as letras do numero romano.~\newline
+Parametros\+: Uma string.~\newline
+Retorno\+: Array de inteiros.~\newline
+O\+BS\+: Funciona somente para entradas corretas.~\newline
+\mbox{\Hypertarget{conversor_8h_a8c8fe9c20601517b4d1d88efbf849f1c}\label{conversor_8h_a8c8fe9c20601517b4d1d88efbf849f1c}} 
+\index{conversor.\+h@{conversor.\+h}!transforma\+Romano@{transforma\+Romano}}
+\index{transforma\+Romano@{transforma\+Romano}!conversor.\+h@{conversor.\+h}}
+\subsubsection{\texorpdfstring{transforma\+Romano()}{transformaRomano()}}
+{\footnotesize\ttfamily char$\ast$ transforma\+Romano (\begin{DoxyParamCaption}\item[{int $\ast$}]{sub\+\_\+numeros }\end{DoxyParamCaption})}
+
+Objetivo\+: Transformar um array de inteiros em um numero romano.~\newline
+Parametros\+: Array de inteiros.~\newline
+Retorno\+: String.~\newline
+O\+BS\+: Funciona somente para entradas corretas.~\newline

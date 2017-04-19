@@ -1,0 +1,107 @@
+\hypertarget{main_8c}{}\section{/home/hugo/Área de Trabalho/\+Frodao/src/main.c File Reference}
+\label{main_8c}\index{/home/hugo/Área de Trabalho/\+Frodao/src/main.\+c@{/home/hugo/Área de Trabalho/\+Frodao/src/main.\+c}}
+{\ttfamily \#include \char`\"{}conversor.\+h\char`\"{}}\newline
+{\ttfamily \#include $<$gtest/gtest.\+h$>$}\newline
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{main_8c_a277bd2b495291fd02f27df622ee3aa65}{T\+E\+ST} (\hyperlink{conversor_8h_a728f04ff315af843f0d88f28bdbee5eb}{transforma\+Arabico}, Entrada\+\_\+correta)
+\item 
+\hyperlink{main_8c_a1deaa42668c681d8ecb5059c0758426f}{T\+E\+ST} (\hyperlink{conversor_8h_a375508b9224e67df4550b9ff34d84c51}{computa\+Numero}, Entrada\+\_\+correta)
+\item 
+\hyperlink{main_8c_ad9c1f3790cccf7c3a0d054c03b0f3b35}{T\+E\+ST} (\hyperlink{conversor_8h_a416f9e821750356055dfab77c7bc54e5}{subdivide\+Numero}, Entrada\+\_\+correta)
+\item 
+\hyperlink{main_8c_a18fa6982bbf50bdf4beafd82faae3d32}{T\+E\+ST} (\hyperlink{conversor_8h_a8c8fe9c20601517b4d1d88efbf849f1c}{transforma\+Romano}, Entrada\+\_\+correta)
+\item 
+\hyperlink{main_8c_af025e73e8ba9eae425997d4c6256f6bf}{T\+E\+ST} (\hyperlink{conversor_8h_a92a8d8307dae077045b59827f10ee804}{converte\+Arabico}, Entrada\+\_\+correta)
+\item 
+\hyperlink{main_8c_ab6ab57f7c2b4618b44deb341d0ea84fa}{T\+E\+ST} (\hyperlink{conversor_8h_a92a8d8307dae077045b59827f10ee804}{converte\+Arabico}, Entradas\+\_\+incorretas)
+\item 
+int \hyperlink{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\Hypertarget{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}\label{main_8c_a3c04138a5bfe5d72780bb7e82a18e627}} 
+\index{main.\+c@{main.\+c}!main@{main}}
+\index{main@{main}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily int main (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$$\ast$}]{argv }\end{DoxyParamCaption})}
+
+\mbox{\Hypertarget{main_8c_a277bd2b495291fd02f27df622ee3aa65}\label{main_8c_a277bd2b495291fd02f27df622ee3aa65}} 
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [1/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{conversor_8h_a728f04ff315af843f0d88f28bdbee5eb}{transforma\+Arabico}}]{,  }\item[{Entrada\+\_\+correta}]{ }\end{DoxyParamCaption})}
+
+Teste para função \hyperlink{conversor_8c_a27374aa087712c51d705390ca6bdfcb6}{transforma\+Arabico()}.~\newline
+Objetivo\+: Transformar um conjunto de simbolos romanos em um array de seus respectivos valores em arabico.~\newline
+Teste\+: Testado somente um valor de entrada correto \char`\"{}\+M\+D\+C\+L\+X\+X\+I\char`\"{}. Uma vez que ele sempre recebera os valores no formato correto.~\newline
+A função passou no teste realizado.~\newline
+\mbox{\Hypertarget{main_8c_a1deaa42668c681d8ecb5059c0758426f}\label{main_8c_a1deaa42668c681d8ecb5059c0758426f}} 
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [2/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{conversor_8h_a375508b9224e67df4550b9ff34d84c51}{computa\+Numero}}]{,  }\item[{Entrada\+\_\+correta}]{ }\end{DoxyParamCaption})}
+
+Teste para função \hyperlink{conversor_8c_a661a23f35ffeb89b14497e1518dccf1a}{computa\+Numero()}.~\newline
+Objetivo\+: Computar o array de numero arabicos gerado pela função transforma\+Arabico, retornando o valor correspondente em arabico.~\newline
+Teste\+: Testado somente um valor de entrada correto (Entrada \char`\"{}\+M\+D\+C\+L\+X\+X\+I\char`\"{} Saida esperada 1671). Uma vez que ele sempre recebera os valores no formato correto.~\newline
+A função passou no teste realizado.~\newline
+\mbox{\Hypertarget{main_8c_ad9c1f3790cccf7c3a0d054c03b0f3b35}\label{main_8c_ad9c1f3790cccf7c3a0d054c03b0f3b35}} 
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [3/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{conversor_8h_a416f9e821750356055dfab77c7bc54e5}{subdivide\+Numero}}]{,  }\item[{Entrada\+\_\+correta}]{ }\end{DoxyParamCaption})}
+
+Teste para função \hyperlink{conversor_8c_a052719022ab6074949ceda1392b609eb}{subdivide\+Numero()}.~\newline
+Objetivo\+: Transformar um numero arabico em um array de 4 algarismos, separando o número em seus 4 algarismos (EX\+: 1234 -\/$>$ \mbox{[}1,2,3,4\mbox{]}).~\newline
+Teste\+: Testado somente um valor de entrada correto (Entrada 299, Saida \mbox{[}0,2,9,9\mbox{]}). Uma vez que ele sempre recebera os valores no formato correto.~\newline
+A função passou no teste realizado.~\newline
+\mbox{\Hypertarget{main_8c_a18fa6982bbf50bdf4beafd82faae3d32}\label{main_8c_a18fa6982bbf50bdf4beafd82faae3d32}} 
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [4/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{conversor_8h_a8c8fe9c20601517b4d1d88efbf849f1c}{transforma\+Romano}}]{,  }\item[{Entrada\+\_\+correta}]{ }\end{DoxyParamCaption})}
+
+Teste para função \hyperlink{conversor_8c_a8e88ccba7397fbd1b9a880abf7e33ccb}{transforma\+Romano()}.~\newline
+Objetivo\+: transformar um conjunto de algarismo arabicos em um array de seus respectivos valores em romanos.~\newline
+Teste\+: Testado somente um valor de entrada correto (Entrada \mbox{[}0,2,9,9\mbox{]}, Saida \char`\"{}\+C\+C\+X\+C\+I\+X\char`\"{}).~\newline
+A função passou no teste realizado.~\newline
+\mbox{\Hypertarget{main_8c_af025e73e8ba9eae425997d4c6256f6bf}\label{main_8c_af025e73e8ba9eae425997d4c6256f6bf}} 
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [5/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{conversor_8h_a92a8d8307dae077045b59827f10ee804}{converte\+Arabico}}]{,  }\item[{Entrada\+\_\+correta}]{ }\end{DoxyParamCaption})}
+
+Teste para função \hyperlink{conversor_8c_a208071477cc8138c57c3b2184af8206d}{converte\+Arabico()}.~\newline
+Objetivo\+: transformar um numero romano em um numero arabico, utiliza das demais funções para tal, sendo que seu principal objetivo é confirmar a veracidade do valor antes de retornar para o usuario.~\newline
+Teste\+: Testado somente um valor de entrada correto.~\newline
+A função passou no teste realizado.~\newline
+\mbox{\Hypertarget{main_8c_ab6ab57f7c2b4618b44deb341d0ea84fa}\label{main_8c_ab6ab57f7c2b4618b44deb341d0ea84fa}} 
+\index{main.\+c@{main.\+c}!T\+E\+ST@{T\+E\+ST}}
+\index{T\+E\+ST@{T\+E\+ST}!main.\+c@{main.\+c}}
+\subsubsection{\texorpdfstring{T\+E\+S\+T()}{TEST()}\hspace{0.1cm}{\footnotesize\ttfamily [6/6]}}
+{\footnotesize\ttfamily T\+E\+ST (\begin{DoxyParamCaption}\item[{\hyperlink{conversor_8h_a92a8d8307dae077045b59827f10ee804}{converte\+Arabico}}]{,  }\item[{Entradas\+\_\+incorretas}]{ }\end{DoxyParamCaption})}
+
+Teste da função \hyperlink{conversor_8c_a208071477cc8138c57c3b2184af8206d}{converte\+Arabico()}.~\newline
+~\newline
+Esta funcao deve tratar todos os casos de entrada do usuario.~\newline
+ Logo todas as anteriores somente iram receber valores corretos de entrada.~\newline
+ Foi testado os seguintes casos de entrada\+:~\newline
+
+\begin{DoxyItemize}
+\item Symbolos em letras maiusculas e minuscolas;~\newline
+
+\item Repetições excessivas;~\newline
+
+\item Romanos incorretas;~\newline
+
+\item Romanos inexistentes;~\newline
+
+\item Acima do valor permitido (3000);~\newline
+ ~\newline
+Retornado -\/1 para erros de entrada ou valores inexistentes, retornado o número arabico correto no caso de entradas corretas.~\newline
+ O\+BS\+: o programa não verifica as seguintes entradas\+: \textquotesingle{}\mbox{[}\textquotesingle{} , \textquotesingle{}\mbox{]}\textquotesingle{} , \textquotesingle{}\textbackslash{}\textquotesingle{} , \textquotesingle{}$^\wedge$\textquotesingle{} , \textquotesingle{}\+\_\+\textquotesingle{} , \textquotesingle{}\textquotesingle{}\textquotesingle{} , \textquotesingle{}\textquotesingle{}.~\newline
+
+\end{DoxyItemize}

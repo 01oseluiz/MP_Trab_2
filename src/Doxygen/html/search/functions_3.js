@@ -1,0 +1,6 @@
+var searchData=
+[
+  ['test',['TEST',['../main_8c.html#a277bd2b495291fd02f27df622ee3aa65',1,'TEST(transformaArabico, Entrada_correta):&#160;main.c'],['../main_8c.html#a1deaa42668c681d8ecb5059c0758426f',1,'TEST(computaNumero, Entrada_correta):&#160;main.c'],['../main_8c.html#ad9c1f3790cccf7c3a0d054c03b0f3b35',1,'TEST(subdivideNumero, Entrada_correta):&#160;main.c'],['../main_8c.html#a18fa6982bbf50bdf4beafd82faae3d32',1,'TEST(transformaRomano, Entrada_correta):&#160;main.c'],['../main_8c.html#af025e73e8ba9eae425997d4c6256f6bf',1,'TEST(converteArabico, Entrada_correta):&#160;main.c'],['../main_8c.html#ab6ab57f7c2b4618b44deb341d0ea84fa',1,'TEST(converteArabico, Entradas_incorretas):&#160;main.c']]],
+  ['transformaarabico',['transformaArabico',['../conversor_8c.html#a27374aa087712c51d705390ca6bdfcb6',1,'transformaArabico(char *roman):&#160;conversor.c'],['../conversor_8h.html#a728f04ff315af843f0d88f28bdbee5eb',1,'transformaArabico(char *):&#160;conversor.c']]],
+  ['transformaromano',['transformaRomano',['../conversor_8c.html#a8e88ccba7397fbd1b9a880abf7e33ccb',1,'transformaRomano(int *sub_numeros):&#160;conversor.c'],['../conversor_8h.html#a8c8fe9c20601517b4d1d88efbf849f1c',1,'transformaRomano(int *):&#160;conversor.c']]]
+];
