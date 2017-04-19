@@ -2,7 +2,7 @@
 2º Trabalho de MP
 
 ###############################################################
-#         Conversor número Romano -> número Arabico           #
+          Conversor número Romano -> número Arabico            
 ###############################################################
 
 Author: José Luiz Gomes.
