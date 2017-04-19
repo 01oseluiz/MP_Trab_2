@@ -1,13 +1,11 @@
  # MP_Trab_2
  
+#Conversor número Romano -> número Arabico
 2º Trabalho de MP
----------------------------------------------------------------
-          Conversor número Romano -> número Arabico            
----------------------------------------------------------------
 
-#Author: José Luiz Gomes.
-#Materia: Metodos de Programação.
-#Data: 19/04/2017.
+#Author: José Luiz Gomes;
+#Materia: Metodos de Programação;
+#Data: 19/04/2017;
 
 -> COMO USAR / COMPILAR
 
