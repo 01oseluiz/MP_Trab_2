@@ -1,13 +1,13 @@
  # MP_Trab_2
  
- #Conversor número Romano -> número Arabico
+#Conversor número Romano -> número Arabico
 2º Trabalho de MP
 
- #Author: José Luiz Gomes;
- #Materia: Metodos de Programação;
- #Data: 19/04/2017;
+#Author: José Luiz Gomes;
+#Materia: Metodos de Programação;
+#Data: 19/04/2017;
 
--> COMO USAR / COMPILAR
+--> COMO USAR / COMPILAR
 
 Com o g++, gcc e gteste, devidamente instalados:
 Abrir o terminal na pasta src.
