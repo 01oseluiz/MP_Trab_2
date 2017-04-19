@@ -5,9 +5,9 @@
 #         Conversor número Romano -> número Arabico           #
 ###############################################################
 
-Author: José Luiz Gomes
-Materia: Metodos de Programação
-Data: 19/04/2017
+Author: José Luiz Gomes.
+Materia: Metodos de Programação.
+Data: 19/04/2017.
 
 -> COMO USAR/ COMPILAR
 
