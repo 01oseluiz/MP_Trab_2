@@ -1,4 +1,4 @@
-# MP_Trab_2
+ # MP_Trab_2
 2º Trabalho de MP
 
 ###############################################################
@@ -9,13 +9,13 @@ Author: José Luiz Gomes.
 Materia: Metodos de Programação.
 Data: 19/04/2017.
 
--> COMO USAR/ COMPILAR
+-> COMO USAR / COMPILAR
 
 Com o g++, gcc e gteste, devidamente instalados:
-  Abrir o terminal na pasta src.
-  Escrever a linha de comando:
-    make
-    ./conversor
+Abrir o terminal na pasta src.
+Escrever a linha de comando:
+make
+./conversor
     
 Assim será compilado os arquivos, conversor.c (modulo do conversor), main.c (testes), conversor.h
 e executado os testes, bem como gerado os arquivos gerados pelo gcov, dado que esta incluso ao makefile as flags para uso do gcov.
